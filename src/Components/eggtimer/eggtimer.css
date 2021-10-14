@@ -1,0 +1,58 @@
+
+/*-------------------------
+		Container
+--------------------------*/
+
+.boiled-egg-timer-container {
+	position: relative;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+	padding: 2em;
+}
+
+/*-------------------------
+		Headers
+--------------------------*/
+
+header {
+    font-size: 3em;
+    text-align: center;
+    padding-top: 25px;
+    text-shadow: 0.05em 0.05em #9d91b3;
+}
+
+h2 {
+    font-weight: lighter;
+    font-size: 15px;
+	margin-top: 10px;
+}
+
+/*-------------------------
+	Info Button
+--------------------------*/
+
+.info-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 15px;
+}
+
+.fas {
+	transition: all 0.2s linear;
+}
+
+.fa-info-circle {
+	color: #fff;
+	cursor: pointer;
+}
+
+.fa-times-circle {
+	color: #f8de86;
+	text-shadow       : #40000070 2px 2px; 
+	cursor: pointer;
+}

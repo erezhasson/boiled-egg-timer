@@ -1,0 +1,350 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+
+input[name="controls"],
+input[name="color"] {
+  display: none;
+  position: absolute;
+}
+
+/*animations*/
+@keyframes start_haptic {
+  from {
+    transform: scale(0.98);
+  }
+  to {
+  }
+}
+@keyframes stop_haptic {
+  from {
+    transform: scale(0.98);
+  }
+  to {
+  }
+}
+@keyframes reset_haptic {
+  from {
+    transform: scale(0.98);
+  }
+  to {
+  }
+}
+
+@keyframes launch {
+  from {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  to {
+  }
+}
+
+@keyframes reset {
+  from {
+    transform: rotateZ(180deg);
+  }
+  60% {
+    transform: rotateZ(-30deg);
+  }
+  70% {
+    transform: rotateZ(10deg);
+  }
+  80% {
+    transform: rotateZ(-10deg);
+  }
+  to {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes sec {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -300px;
+  }
+}
+@keyframes sec1 {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -180px;
+  }
+}
+
+
+/*stopwatch*/
+
+.stopwatch {
+  animation: launch ease-out 0.3s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  display: inline-block;
+  height: fit-content;
+  width: fit-content;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-bottom: 100px;
+  transition: 0.15s;
+  z-index: 1;
+}
+/*digits*/
+
+.digit_contianer {
+  width: 180px;
+  height: 30px;
+  margin: 40px auto 20px auto;
+}
+.space {
+  height: 30px;
+  width: 15px;
+  float: left;
+  font-family: digit;
+  font-size: 14px;
+  color: #fff;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+}
+.animcont {
+  height: 30px;
+  width: 13px;
+  overflow: hidden;
+  float: left;
+  margin: 0 1px;
+}
+.hours,
+.min,
+.min1,
+.sec,
+.mil,
+.sec1,
+.mil1,
+.mil0 {
+  font-family: Abel;
+  width: 13px;
+  font-size: 24px;
+  color: #fff;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+}
+.min {
+  animation: sec steps(10) 600s infinite;
+  animation-play-state: paused;
+}
+.min1 {
+  animation: sec1 steps(6) 3600s infinite;
+  animation-play-state: paused;
+}
+.sec {
+  animation: sec steps(10) 10s infinite;
+  animation-play-state: paused;
+}
+.sec1 {
+  animation: sec1 steps(6) 60s infinite;
+  animation-play-state: paused;
+}
+.mil {
+  animation: sec steps(10) 0.01s infinite;
+  animation-play-state: paused;
+}
+.mil1 {
+  animation: sec steps(10) 0.1s infinite;
+  animation-play-state: paused;
+}
+.mil0 {
+  animation: sec steps(10) 1s infinite;
+  animation-play-state: paused;
+}
+
+.start:checked ~ .container .mil0 {
+  animation-play-state: running;
+}
+.stop:checked ~ .container .mil0 {
+  animation-play-state: paused;
+}
+.start:checked ~ .container .mil {
+  animation-play-state: running;
+}
+
+.stop:checked ~ .container .mil {
+  animation-play-state: paused;
+}
+.start:checked ~ .container .mil1 {
+  animation-play-state: running;
+}
+.stop:checked ~ .container .mil1 {
+  animation-play-state: paused;
+}
+
+.reset:checked ~ .container .mil1 {
+  animation: none;
+  top: 0;
+  transition: 0.2s;
+}
+.reset:checked ~ .container .mil0 {
+  animation: none;
+  top: 0;
+  transition: 0.2s;
+}
+.reset:checked ~ .container .mil {
+  animation: none;
+  top: 0;
+  transition: 0.2s;
+}
+
+.start:checked ~ .container .sec {
+  animation-play-state: running;
+}
+.stop:checked ~ .container .sec {
+  animation-play-state: paused;
+}
+.reset:checked ~ .container .sec {
+  animation: none;
+  top: 0;
+  transition: 0.2s;
+}
+
+.start:checked ~ .container .sec1 {
+  animation-play-state: running;
+}
+.stop:checked ~ .container .sec1 {
+  animation-play-state: paused;
+}
+.reset:checked ~ .container .sec1 {
+  animation: none;
+  top: 0;
+  transition: 0.2s;
+}
+
+.start:checked ~ .container .min {
+  animation-play-state: running;
+}
+.stop:checked ~ .container .min {
+  animation-play-state: paused;
+}
+.reset:checked ~ .container .min {
+  animation: none;
+  top: 0;
+  transition: 0.2s;
+}
+
+.start:checked ~ .container .min1 {
+  animation-play-state: running;
+}
+.stop:checked ~ .container .min1 {
+  animation-play-state: paused;
+}
+.reset:checked ~ .container .min1 {
+  animation: none;
+  top: 0;
+  transition: 0.2s;
+}
+
+.start:checked ~ .container .arrow {
+  animation-play-state: running;
+}
+.stop:checked ~ .container .arrow {
+  animation-play-state: paused;
+}
+.reset:checked ~ .container .arrow {
+  animation: reset 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.controls {
+  height: 60px;
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.stop_,
+.start_ {
+  position: absolute;
+  z-index: 3;
+  height: 60px;
+  width: 80px;
+  left: 60px;
+  transition: 0.2s;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.start_ {
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='40px' height='40px' viewBox='0 0 40 40' enable-background='new 0 0 40 40' xml:space='preserve'><path  fill='%23FFFFFF' d='M30.021,25.3c-5.289,2.867-10.491,5.885-15.607,9.053c-5.115,3.168-7.587,1.735-7.413-4.3 s0.174-12.07,0-18.105s2.298-7.468,7.413-4.3c5.116,3.168,10.318,6.186,15.607,9.053C35.31,19.566,35.31,22.434,30.021,25.3z'/></svg>");
+}
+.stop_ {
+  opacity: 0;
+  transform: scale(2);
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='40px' height='40px' viewBox='0 0 40 40' enable-background='new 0 0 40 40' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd'  fill='%23FFFFFF' d='M15,8H9c-1.104,0-2,0.896-2,2v21c0,1.104,0.896,2,2,2h6 c1.104,0,2-0.896,2-2V10C17,8.896,16.104,8,15,8z M31,8h-6c-1.104,0-2,0.896-2,2v21c0,1.104,0.896,2,2,2h6c1.104,0,2-0.896,2-2V10 C33,8.896,32.104,8,31,8z'/></svg>");
+}
+
+.reset_ {
+  height: 60px;
+  width: 80px;
+  display: none;
+  position: absolute;
+  transition: 0.2s;
+  right: 0;
+  animation: info 0.2s;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='40px' height='40px' viewBox='0 0 40 40' enable-background='new 0 0 40 40' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd'  fill='%23FFFFFF' d='M21,20l5.895-5.895C25.13,12.342,22.692,11.25,20,11.25 c-5.385,0-9.75,4.365-9.75,9.75s4.365,9.75,9.75,9.75c3.335,0,6.273-1.68,8.031-4.234c0,0,1.473-1.498,2.969-0.516 c1.962,1.289,1.749,2.875,1.749,2.875C30.105,33.146,25.392,36,20,36c-8.284,0-15-6.716-15-15S11.716,6,20,6 c4.143,0,7.893,1.679,10.606,4.394L36,5v15H21z'/></svg>");
+}
+.reset_::after {
+  height: 60px;
+  width: 20px;
+  text-align: center;
+  position: absolute;
+  transition: 0.2s;
+  right: 0;
+  content: "/";
+  font-family: digit;
+  line-height: 60px;
+  color: #fff;
+  right: 90px;
+  font-size: 24px;
+  animation: info 0.4s;
+}
+
+.start:checked ~ .container .controls .start_ {
+  opacity: 0;
+  transform: scale(2);
+}
+.start:checked ~ .container .controls .stop_ {
+  z-index: 4;
+  opacity: 1;
+  transform: scale(1);
+}
+.start:checked ~ .container .controls .reset_ {
+  display: block;
+}
+.stop:checked ~ .container .controls .reset_ {
+  display: block;
+}
+
+.start:checked ~ .container .controls .stop_,
+.start:checked ~ .container .controls .start_ {
+  left: 0;
+}
+.stop:checked ~ .container .controls .stop_,
+.stop:checked ~ .container .controls .start_ {
+  left: 0;
+}
+
+/*haptic feedback*/
+.start:checked ~ .container {
+  animation: start_haptic 0.2s;
+}
+.stop:checked ~ .container {
+  animation: stop_haptic 0.2s;
+}
+.reset:checked ~ .container {
+  animation: reset_haptic 0.2s;
+}
+

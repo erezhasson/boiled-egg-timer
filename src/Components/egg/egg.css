@@ -1,0 +1,105 @@
+ 
+   .eggs {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 300px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .const-circle, .eggs .egg3 .cr31 .cr32, .eggs .egg2 .cr21 .cr23, .eggs .egg2 .cr21 .cr22, .eggs .egg1 .cr11 .cr13, .eggs .egg1 .cr11 .cr12 {
+    border-radius: 100%;
+    position: absolute;
+  }
+  
+  .eggs .egg3, .eggs .egg2, .eggs .egg1 {
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+  
+
+  .eggs {
+    height: 250px;
+  }
+  .eggs .egg1 .cr11 {
+    top: 50%;
+    left: 50%;
+    width: 170px;
+    height: 240px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-top-left-radius: 60% 70%;
+    border-top-right-radius: 60% 70%;
+    border-bottom-left-radius: 60% 50%;
+    border-bottom-right-radius: 60% 50%;
+    box-shadow: 5px 5px #9d91b3;
+    position: absolute;
+  }
+  .eggs .egg1 .cr11 .cr12 {
+    top: 100px;
+    left: 25px;
+    width: 120px;
+    height: 120px;
+    background-color: #fef600;
+  }
+  .eggs .egg1 .cr11 .cr13 {
+    top: 5px;
+    left: 5px;
+    width: 110px;
+    height: 110px;
+    background-color: #fbbd00;
+    box-shadow: inset 10px 10px #fed400;
+  }
+  .eggs .egg2 .cr21 {
+    top: 50%;
+    left: 50%;
+    width: 170px;
+    height: 240px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-top-left-radius: 60% 70%;
+    border-top-right-radius: 60% 70%;
+    border-bottom-left-radius: 60% 50%;
+    border-bottom-right-radius: 60% 50%;
+    box-shadow: 5px 5px #9d91b3;
+    position: absolute;
+  }
+  .eggs .egg2 .cr21 .cr22 {
+    top: 100px;
+    left: 25px;
+    width: 120px;
+    height: 120px;
+    background-color: #fef600;
+  }
+  .eggs .egg2 .cr21 .cr23 {
+    top: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #fbbd00;
+    box-shadow: inset 15px 15px #fed400;
+  }
+  .eggs .egg3 .cr31 {
+    top: 50%;
+    left: 50%;
+    width: 170px;
+    height: 240px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-top-left-radius: 60% 70%;
+    border-top-right-radius: 60% 70%;
+    border-bottom-left-radius: 60% 50%;
+    border-bottom-right-radius: 60% 50%;
+    box-shadow: 5px 5px #9d91b3;
+    position: absolute;
+  }
+  .eggs .egg3 .cr31 .cr32 {
+    top: 100px;
+    left: 25px;
+    width: 120px;
+    height: 120px;
+    background-color: #fef600;
+  }
