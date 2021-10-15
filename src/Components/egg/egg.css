@@ -1,5 +1,5 @@
  
-   .eggs {
+   .egg-container {
     position: absolute;
     bottom: 0;
     margin-bottom: 300px;
@@ -7,24 +7,11 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-  }
-  
-  .const-circle, .eggs .egg3 .cr31 .cr32, .eggs .egg2 .cr21 .cr23, .eggs .egg2 .cr21 .cr22, .eggs .egg1 .cr11 .cr13, .eggs .egg1 .cr11 .cr12 {
-    border-radius: 100%;
-    position: absolute;
-  }
-  
-  .eggs .egg3, .eggs .egg2, .eggs .egg1 {
-    width: 250px;
     height: 250px;
-    position: relative;
+    flex-direction: row;
   }
-  
 
-  .eggs {
-    height: 250px;
-  }
-  .eggs .egg1 .cr11 {
+  .cr11 {
     top: 50%;
     left: 50%;
     width: 170px;
@@ -38,14 +25,16 @@
     box-shadow: 5px 5px #9d91b3;
     position: absolute;
   }
-  .eggs .egg1 .cr11 .cr12 {
+
+  .cr12 {
     top: 100px;
     left: 25px;
     width: 120px;
     height: 120px;
     background-color: #fef600;
   }
-  .eggs .egg1 .cr11 .cr13 {
+
+  .cr13 {
     top: 5px;
     left: 5px;
     width: 110px;
@@ -53,7 +42,8 @@
     background-color: #fbbd00;
     box-shadow: inset 10px 10px #fed400;
   }
-  .eggs .egg2 .cr21 {
+
+  .cr21 {
     top: 50%;
     left: 50%;
     width: 170px;
@@ -67,14 +57,16 @@
     box-shadow: 5px 5px #9d91b3;
     position: absolute;
   }
-  .eggs .egg2 .cr21 .cr22 {
+  
+  .cr22 {
     top: 100px;
     left: 25px;
     width: 120px;
     height: 120px;
     background-color: #fef600;
   }
-  .eggs .egg2 .cr21 .cr23 {
+  
+  .cr23 {
     top: 30px;
     left: 30px;
     width: 60px;
@@ -82,7 +74,8 @@
     background-color: #fbbd00;
     box-shadow: inset 15px 15px #fed400;
   }
-  .eggs .egg3 .cr31 {
+  
+  .cr31 {
     top: 50%;
     left: 50%;
     width: 170px;
@@ -96,10 +89,95 @@
     box-shadow: 5px 5px #9d91b3;
     position: absolute;
   }
-  .eggs .egg3 .cr31 .cr32 {
+  
+  .cr32 {
     top: 100px;
     left: 25px;
     width: 120px;
     height: 120px;
     background-color: #fef600;
   }
+
+  
+  .egg, .egg1, .egg2, .egg3 {
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+
+  .egg-yolk, .egg-yolk-center {
+    border-radius: 100%;
+    position: absolute;
+  }
+
+  .egg-white {
+    top: 50%;
+    left: 50%;
+    width: 170px;
+    height: 240px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-top-left-radius: 60% 70%;
+    border-top-right-radius: 60% 70%;
+    border-bottom-left-radius: 60% 50%;
+    border-bottom-right-radius: 60% 50%;
+    box-shadow: 5px 5px #9d91b3;
+    position: absolute;
+  }
+
+  .egg-yolk {
+    top: 100px;
+    left: 25px;
+    width: 120px;
+    height: 120px;
+    background-color: #fef600;
+  }
+
+  .egg-yolk-center {
+    animation: boil-egg-yolk-center 720s;
+    animation-play-state: paused;
+  }
+
+  .resume {
+    animation: boil-egg-yolk-center 720s;
+    animation-play-state: running;
+  }
+
+  .paused {
+    animation-play-state: paused;
+  }
+
+  .restart {
+    top: 5px;
+    left: 5px;
+    width: 110px;
+    height: 110px;
+    background-color: #fbbd00;
+    box-shadow: inset 10px 10px #fed400;
+    animation: none;
+  }
+
+  @keyframes boil-egg-yolk-center {
+    0%{
+      top: 5px;
+      left: 5px;
+      width: 110px;
+      height: 110px;
+      background-color: #fbbd00;
+      box-shadow: inset 10px 10px #fed400;
+    }
+    50%{
+      top: 30px;
+      left: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #fbbd00;
+      box-shadow: inset 15px 15px #fed400;
+    }
+
+    100%{
+
+    }
+  }
+
+

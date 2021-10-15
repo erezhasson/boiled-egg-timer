@@ -82,39 +82,42 @@
   padding-top: 20px;
 }
 
-p {
+#info p {
   width: 100%;
   font-size: 13px;
   margin: auto;
 }
 
 .buttons {
-  display: absolute;
+  display: inline-block;
+  position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 50px;
-  margin-top: 20px;
+  right: 0;
+  width: fit-content;
+  margin-bottom: 24px;
+  height: fit-content;
   font-family: cursive;
-  font-size: 20px;
+  font-size: 25px;
+  /* text-shadow       : #40000070 2px 2px;  */
 }
 
 .buttons-head {
   color             : #f8de86;
-  text-shadow       : #40000070 2px 2px; 
   font-size: 18px;
 }
 
-i {
-  cursor: pointer;
+a{
+  margin-right: 15px;
 }
 
 .fa-github {
-  margin-right: 15px;
   color: #6e5494;
+  cursor: pointer;
 }
 
 .fa-linkedin-in {
   color: #0e76a8;
+  cursor: pointer;
 }
 
  

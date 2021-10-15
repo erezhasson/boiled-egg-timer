@@ -1,12 +1,12 @@
 import React from "react";
 import './stopwatch.css'
 
-export default function StopWatch() {
+export default function StopWatch(props) {
     return(
         <div class="stopwatch">
-        <input id="start" class="start" name="controls" type="radio" />
-        <input id="stop" class="stop" name="controls" type="radio" />
-        <input id="reset" class="reset" name="controls" type="radio" />
+        <input id="start" class="start" name="controls" type="radio" onChange={props.start} />
+        <input id="stop" class="stop" name="controls" type="radio" onChange={props.pause}  />
+        <input id="reset" class="reset" name="controls" type="radio" onChange={props.restart} />
 
         <div class="container">
         <div class="digit_contianer">

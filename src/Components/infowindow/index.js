@@ -17,7 +17,7 @@ export default function InfoWindow(props) {
 
           
           <div className="buttons">
-            <div className="buttons-head">Follow Me:</div>
+            {/* <div className="buttons-head">Follow Me:</div> */}
             <a href="https://github.com/erezhasson" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a>
           </div>

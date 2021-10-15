@@ -347,4 +347,3 @@ input[name="color"] {
 .reset:checked ~ .container {
   animation: reset_haptic 0.2s;
 }
-
