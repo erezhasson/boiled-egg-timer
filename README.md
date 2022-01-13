@@ -28,7 +28,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/erezhasson/boiled-egg-timer">
+  <a href="https://boiled-egg-timer.herokuapp.com/">
     <img src="https://user-images.githubusercontent.com/69516798/149393960-1aafacbc-cf7d-4d52-b737-f85d14c25990.png" alt="Logo">
   </a>
   
