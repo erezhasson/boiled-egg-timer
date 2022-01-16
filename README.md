@@ -40,7 +40,7 @@
     <a href="https://github.com/erezhasson/boiled-egg-timer"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://youtu.be/4ylUOvWFy60">View Website</a>
+    <a href="https://boiled-egg-timer.herokuapp.com/">View Website</a>
     ·
     <a href="https://github.com/erezhasson/boiled-egg-timer/issues">Report Bug</a>
     ·
